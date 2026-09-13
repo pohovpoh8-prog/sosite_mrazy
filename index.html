@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Личный сайт Дмитрия — помощь с учебой, проектами и экзаменами." />
+  <title>Дмитрий — помощь с учебой</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Дмитрий">
+        <span class="logo">Z</span><span>Дмитрий</span>
+      </a>
+      <nav>
+        <a class="active" href="#home">Главная</a>
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#comments">Комментарии</a>
+      </nav>
+      <button class="menu" aria-label="Открыть меню">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow">РЕШЕНИЕ ЕСТЬ</div>
+        <h1>Меня зовут<br>Дмитрий и это сайт<br>для нашего <span>общения</span></h1>
+        <p>Меня зовут Дмитрий, и я решил сделать этот сайт для того, чтобы мы могли решать проблемы в учебе.</p>
+        <a class="btn primary" href="#contacts">
+          <span class="telegram-icon">➤</span> Написать мне
+        </a>
+        <div class="hero-note">Если будут проблемы, пишите мне<br>в Telegram или MAX <span>›</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="glow"></div>
+        <img src="assets/hero.jpg" alt="Иллюстрация из референса" />
+        <div class="scribble">Давайте<br>решать<br>проблемы<br>вместе!<br>☺</div>
+      </div>
+    </section>
+
+    <section class="about container" id="about">
+      <div class="about-copy">
+        <div class="eyebrow">ПОЧЕМУ Я?</div>
+        <h2>Я здесь, чтобы<br>помочь</h2>
+        <p>Я понимаю, как сложно бывает с учебой, особенно когда что-то не получается. Поэтому я готов поддержать, объяснить и помочь разобраться в любой теме.</p>
+        <div class="handnote">Главное —<br>не бояться<br>спрашивать!</div>
+      </div>
+      <div class="study-card">
+        <img src="assets/study.jpg" alt="Учебные материалы" />
+        <div class="study-overlay">Вместе<br>мы найдем<br>решение! ☺</div>
+      </div>
+    </section>
+
+    <section class="features container" id="services">
+      <article class="feature">
+        <div class="feature-icon">🎓</div>
+        <h3>Помогу разобраться<br>с заданиями и темами</h3>
+        <p>Объясню просто<br>и понятно</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon">▱</div>
+        <h3>Отвечу на вопросы<br>и дам советы</h3>
+        <p>По учебе, проектам,<br>экзаменам</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon">👥</div>
+        <h3>Всегда на связи</h3>
+        <p>Пиши —<br>не стесняйся!</p>
+      </article>
+      <article class="feature">
+        <div class="feature-icon">✓</div>
+        <h3>Если будут проблемы,<br>пишите мне в Telegram<br>или MAX</h3>
+        <p>Помогу, подскажу,<br>найду решение</p>
+      </article>
+    </section>
+
+    <section class="contact container" id="contacts">
+      <div class="contact-icon">➤</div>
+      <div>
+        <div class="phone">+7 (952)-189-47-90</div>
+        <div class="contact-sub">Напишите мне в Telegram или MAX</div>
+        <div class="contact-buttons">
+          <a class="btn primary small" href="https://t.me/" target="_blank" rel="noreferrer">➤ &nbsp;Telegram</a>
+          <a class="btn max small" href="https://max.ru/" target="_blank" rel="noopener noreferrer">◉ &nbsp;MAX</a>
+        </div>
+      </div>
+      <div class="contact-side">☺<br><span>Не стесняйтесь,<br>я всегда на связи!<br>Буду рад помочь!</span></div>
+    </section>
+
+    <section class="comments container" id="comments">
+      <div class="eyebrow">ОБЩЕНИЕ</div>
+      <div class="comments-heading">
+        <div>
+          <h2>Комментарии</h2>
+          <p>Оставьте вопрос, отзыв или напишите, с чем нужна помощь. Комментарии видны всем посетителям.</p>
+        </div>
+        <span id="commentCount" class="count">0 комментариев</span>
+      </div>
+
+      <form id="commentForm" class="comment-form">
+        <input id="name" name="name" type="text" maxlength="40" placeholder="Ваше имя" required />
+        <textarea id="message" name="message" maxlength="500" rows="4" placeholder="Напишите комментарий..." required></textarea>
+        <div class="form-bottom">
+          <span id="charCount">0 / 500</span>
+          <button class="btn primary" type="submit">Опубликовать комментарий</button>
+        </div>
+      </form>
+
+      <div id="commentsList" class="comments-list"></div>
+    </section>
+
+  
+
+  
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Дмитрий · Сделано для общения и помощи</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
