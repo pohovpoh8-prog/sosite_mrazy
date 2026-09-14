@@ -111,6 +111,20 @@
       </form>
 
       <div id="commentsList" class="comments-list"></div>
+
+      <div class="admin-area">
+        <button id="adminToggle" class="admin-toggle" type="button">Вход администратора</button>
+        <form id="adminForm" class="admin-form" hidden>
+          <input id="adminEmail" type="email" placeholder="Email администратора" autocomplete="username" required />
+          <input id="adminPassword" type="password" placeholder="Пароль" autocomplete="current-password" required />
+          <div class="admin-actions">
+            <button class="btn primary small" type="submit">Войти</button>
+            <button id="adminCancel" class="admin-toggle" type="button">Отмена</button>
+          </div>
+          <div id="adminStatus" class="admin-status"></div>
+        </form>
+        <button id="adminLogout" class="admin-toggle" type="button" hidden>Выйти из режима администратора</button>
+      </div>
     </section>
 
   

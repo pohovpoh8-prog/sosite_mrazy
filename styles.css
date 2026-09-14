@@ -128,3 +128,91 @@ h2{font-size:36px;line-height:1.06;margin:0 0 17px;letter-spacing:-1px}.handnote
     padding-bottom: 60px;
   }
 }
+
+/* Мобильная адаптация и полное отображение изображений */
+.hero-art img,
+.study-card img {
+  object-fit: contain;
+}
+
+.hero-art img {
+  max-width: 100%;
+}
+
+.study-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #020b18;
+}
+
+.study-card img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.admin-area {
+  max-width: 1000px;
+  margin: 18px auto 0;
+  text-align: right;
+}
+
+.admin-toggle {
+  border: 0;
+  background: transparent;
+  color: #607696;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  padding: 6px 0;
+}
+
+.admin-toggle:hover { color: #9eb2d0; }
+.admin-form {
+  margin-top: 10px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(7,21,41,.72);
+  text-align: left;
+}
+.admin-form input {
+  width: 100%;
+  background: #041124;
+  border: 1px solid rgba(126,162,215,.18);
+  color: white;
+  border-radius: 10px;
+  padding: 11px 13px;
+  font: inherit;
+  outline: none;
+  margin-bottom: 10px;
+}
+.admin-actions { display: flex; gap: 12px; align-items: center; }
+.admin-status { color: #8ea6c7; font-size: 12px; margin-top: 10px; }
+
+@media (max-width: 820px) {
+  .container { width: min(100% - 24px, 620px); }
+  .header { height: 64px; }
+  .hero { padding-top: 28px; }
+  .hero-art { height: auto; min-height: 330px; }
+  .hero-art img { width: min(300px, 82vw); height: auto; max-height: 360px; }
+  .hero-art .glow { width: 320px; height: 320px; }
+  .scribble { right: 0; bottom: 24px; }
+  .study-card { height: auto; min-height: 240px; padding: 8px; }
+  .study-card img { width: 100%; height: auto; max-height: 360px; }
+  .study-overlay { left: 8%; top: 18%; max-width: 80%; }
+  .comment-form, .comments-list, .comments-heading, .admin-area { width: 100%; }
+}
+
+@media (max-width: 520px) {
+  .hero-art { min-height: 300px; }
+  .hero-art img { width: min(260px, 84vw); max-height: 320px; }
+  .hero-art .glow { width: 280px; height: 280px; }
+  .scribble { right: 2px; bottom: 16px; font-size: 15px; }
+  .study-card { min-height: 0; }
+  .study-card img { max-height: none; }
+  .study-overlay { font-size: 18px; padding: 18px 20px; }
+  .comment-form { padding: 18px; }
+  .admin-actions { flex-wrap: wrap; }
+}
